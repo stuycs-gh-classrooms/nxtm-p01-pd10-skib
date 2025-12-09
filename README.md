@@ -69,7 +69,7 @@ Mouse Control:
 
 ### Classes
 What classes will you be creating for this project? Include the instance variables and methods that you believe you will need. You will be required to create at least 2 different classes. If you are going to use classes similar to those we've made for previous assignments, you will have to add new features to them.
-'''
+```
 CLASS Player
 - Instance variables:
   - int x, y Position of player ship
@@ -108,4 +108,4 @@ CLASS Bullet
   - boolean offScreen() Checks if bullet is in screen
   - boolean checkCollision(Enemy e) Returns true if the bullet hits an enemy
   - boolean checkCollision(Player p) Returns true if the bullet hits the player
-    '''
+    ```
