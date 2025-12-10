@@ -1,4 +1,4 @@
-class Enemy{
+class Enemy {
   int x, y;
   int type;
   boolean alive;
