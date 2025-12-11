@@ -7,12 +7,13 @@ int moveInterval = 30;
 void setup() {
   size(1000, 800);
   player = new Player(width/2, height - 40, 3);
+  frameRate(60);
   enemies = new ArrayList<Enemy>();
   for (int r = 0; r < enemyRows; r++) {
    for ( int c = 0; c < enemyCols; c++) {
      int type = 1 + (r %3);
-     int x = 20 + c*20;
-     int y = 20 + r * 15;
+     int x = 20 + c*90;
+     int y = 60 + r * 60;
      enemies.add(new Enemy(type, x, y, 1));
    }
   }
@@ -123,6 +124,8 @@ void draw() {
 void keyPressed() {
  player.move(key);
  if (key == ' ') {
+    
    player.shoot();
+   
  }
 }

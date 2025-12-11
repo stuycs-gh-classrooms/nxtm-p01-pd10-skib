@@ -4,7 +4,7 @@ class Enemy {
   boolean alive;
   int direction;
   Bullet[] bullets;
-  int size = 20;
+  int size = 10;
    Enemy(int type, int x, int y, int direction)
   {
     this.type = type;
@@ -16,14 +16,16 @@ class Enemy {
   }
   void move()
   {
-    if(x >= 20 && x <= width - 20)
+    if(x >= 0 && x <= width )
     {
       x += direction * 20;
     }
     else
     {
       y += 20;
-      direction *= -1;
+      direction = -1*direction;
+      x += direction * 20;
+      
     }
   }
   void shoot()

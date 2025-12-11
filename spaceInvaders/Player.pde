@@ -3,7 +3,7 @@ class Player {
   int lives;
   Bullet[] bullet;
   int score;
-  int size = 20;
+  int size = 30;
   Player(int xs, int ys, int livess) {
    this.x = xs;
    this.y = ys;

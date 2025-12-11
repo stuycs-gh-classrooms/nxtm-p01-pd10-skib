@@ -16,7 +16,7 @@ class Bullet {
   void display()
   {
     fill(200,0,0);
-    ellipse(float(x), float(y), 2.0, 5.0);
+    ellipse(float(x), float(y), 10.0, 15.0);
   }
   boolean offScreen()
   {
