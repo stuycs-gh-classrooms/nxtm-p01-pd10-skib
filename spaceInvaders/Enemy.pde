@@ -5,12 +5,12 @@ class Enemy {
   int direction;
   Bullet[] bullets;
   int size = 20;
-  public Enemy(int type, int x, int y, int direction)
+   Enemy(int type, int x, int y, int direction)
   {
     this.type = type;
     this.x = x;
     this.y = y;
-    bullets = new Bullet[100];
+    bullets = new Bullet[30];
     this.direction = direction;
     alive = true;
   }
@@ -28,31 +28,24 @@ class Enemy {
   }
   void shoot()
   {
-    boolean hasShot = false;
-    int i = 0;
-    while(!hasShot)
-    {
-      if(bullets[i] == null)
-      {
-        bullets[i] = new Bullet(x, y + 20, 10);
-        hasShot = true;
-      }
-      else
-      {
-        i++;
-      }
+   for(int i = 0; i < bullets.length; i++) {
+    if (bullets[i] == null) {
+      bullets[i] = new Bullet(x, y - size/2 - 6, -8);
+      return;
     }
+   }
   }
   void display()
   {
      if(alive)
      {
+       fill(255);
        triangle(x-type*size, y + type*size, x + type*size, y + type*size, x, y - type*size);
      }
   }
   boolean checkCollision(Bullet b)
   {
-    if(abs(this.x - b.x) <= type*size && abs(this.y - b.y) <= type*size)
+    if(alive && abs(this.x - b.x) <= type*size && abs(this.y - b.y) <= type*size)
     
     {
       return true;
@@ -67,7 +60,6 @@ class Enemy {
     alive = false;
     
   }
-  
-  
-  
 }
+  
+  
