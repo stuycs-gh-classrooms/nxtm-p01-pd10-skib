@@ -18,9 +18,9 @@ class Player {
     }
   }//display
   void move(char input) {
-    if((input == 'a'|| input == 'A')&& width-20 >x && x > 20){
+    if((input == 'a'|| input == 'A')&&  x > 20){
      x -= size/2;
-    }else if ((input == 'd'|| input == 'D')&& width-20 >x && x > 20) {
+    }else if ((input == 'd'|| input == 'D')&& width-20 >x ) {
      x += size/2; 
     }
   }//move
