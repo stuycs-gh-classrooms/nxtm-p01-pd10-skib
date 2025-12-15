@@ -15,7 +15,7 @@ class Bullet {
   }
   void display()
   {
-    fill(200,0,0);
+    fill(200, 0, 0);
     ellipse(float(x), float(y), 10.0, 15.0);
   }
   boolean offScreen()
@@ -23,11 +23,9 @@ class Bullet {
     if (y >= height - 5 || y <= -5)
     {
       return true;
-    }
-    else
+    } else
     {
       return false;
     }
   }
-  
 }
